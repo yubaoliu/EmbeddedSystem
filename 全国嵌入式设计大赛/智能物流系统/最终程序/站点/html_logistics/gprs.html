@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0082)http://www.zjtcm.net/wljx/Computer/Data%20Structure/Tsinghua/lesson/ch01/0101.html -->
+<HTML><HEAD><TITLE>GPRS无线通讯模块</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb_2312-80">
+<META content="MSHTML 6.00.2900.5583" name=GENERATOR>
+<META content="none, default" name="Microsoft Border"></HEAD>
+<style type="text/css">
+body
+{ 
+background: url('worker/back2.jpg') no-repeat fixed center; 
+}
+</style>
+<BODY><B><FONT lang=ZH-CN face=楷体_GB2312 
+color=#ffffff size=5>
+<P align=center>GPRS无线通讯模块</P></FONT>
+<FONT color=#ffffff size=4>
+<center>
+<TABLE cellSpacing=2 cellPadding=2 width="80%" border=1><center>
+<P align=justify></B>&nbsp&nbsp;&nbsp;&nbsp;</font><B><FONT lang=ZH-CN face=楷体_GB2312 
+color=#ffffff>无线通讯模块是车载端得一个重要组成部分，一方面车载端通过通讯模块把GPS模块所接收的位置信息传送到物流监控中心，作为监控调度的参考；另一方面物流监控中心通过发送短信通知客户货物信息状况。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;本系统选用SIMCOM提供的GSM/GPRS双频模块SIM300，用于实现无线通信，包括语音传输、短信息发送接收和无线数据传输等功能。SIM300 集成了完整的射频电路和 GSM 的基带处理器。SIM300 模块为用户提供了功能完备的系统接口。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;本模块需要单独的 5V2A 的直流电源供电，经过芯片 MIC29302稳压后得到 4.2V 电压供给GPRS 模块使用。 SIM300提供标准的RS-232串行接口，用户可以通过串行口（串行口选用的通信速率：115200）使用AT命令完成对模块的操作。 当模块上电启动并报出 RDY 后，用户才可以和模块进行通信，用户可以首先使用模块默认速率 115200与模块通信，并可通过 AT+IPR=<rate>命令自由切换至其它通信速率。在应用设计中，当 MCU 需要通过串口与模块进行通讯时，可以只用三个引脚：TXD，RXD 和GND。其他引脚悬空，建议 RTS 和DTR 置低。本扩展板上采用 MAX3232 芯片完成GPRS 模块的TTL电平到 RS232 电平的转换，以能和 ARM 开发平台的 RS232 串口连接<br/>
+
+</P></FONT><center><img src="worker/GPRS.jpg"/ ><BR/>
+<center>GPRS模块（型号：UP-GPRS）</center></center></table></center>
+<center><A href="index.html"    onclick="back">返回</A></center>
+</BODY></HTML>

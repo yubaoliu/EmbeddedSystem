@@ -1,0 +1,13 @@
+[Translation]
+File=QtopiaServices
+Context=Calendar
+[Service]
+Actions = raiseToday();newEvent();newEvent(QDataTime,QDataTime,QString,QString);addEvent(PimEvent);removeEvent(PimEvent);updateEvent(PimEvent);showEvent(Quuid);showEvent(QUuid,QDate)
+Icon = datebook_icon
+Name[]=Calendar
+[newEvent()]
+Icon = datebook_icon
+Name[]=New event
+[raiseToday()]
+Icon=today
+Name[]=Today's calendar

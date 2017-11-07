@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <errno.h>
+#include <pthread.h>
+#include <time.h>
+#include "IC_card.h"
+#include "../keyboard/get_key.h"

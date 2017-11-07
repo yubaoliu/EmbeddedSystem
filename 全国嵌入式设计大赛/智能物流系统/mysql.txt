@@ -1,0 +1,101 @@
+mysql>database logistics
+mysql>show tables;
++---------------------+
+| Tables_in_logistics |
++---------------------+
+| DEPARTURE           | 
+| DILIVERY            | 
+| MERCHANDISE         | 
+| REGISTER            | 
+| SDISPATCH1          | 
+| SWAREHOUSE1         | 
+| SWAREHOUSE2         | 
+| TRUCK0              | 
+| TRUCK1              | 
++---------------------+
+mysql> describe DEPARTURE;
++-------------+----------+------+-----+---------+-------+
+| Field       | Type     | Null | Key | Default | Extra |
++-------------+----------+------+-----+---------+-------+
+| truckid     | char(5)  | NO   | PRI |         |       | 
+| ic          | char(20) | NO   | PRI |         |       | 
+| destination | char(20) | YES  |     | NULL    |       | 
++-------------+----------+------+-----+---------+-------+
+mysql> describe DILIVERY;
++-------------+----------+------+-----+---------+-------+
+| Field       | Type     | Null | Key | Default | Extra |
++-------------+----------+------+-----+---------+-------+
+| username    | char(20) | NO   | PRI | NULL    |       | 
+| truck       | char(10) | YES  |     | NULL    |       | 
+| departure   | char(30) | YES  |     | NULL    |       | 
+| destination | char(30) | YES  |     | NULL    |       | 
+| description | char(30) | YES  |     | NULL    |       | 
++-------------+----------+------+-----+---------+-------+
+mysql> describe MERCHANDISE;
++-------------+----------+------+-----+---------+-------+
+| Field       | Type     | Null | Key | Default | Extra |
++-------------+----------+------+-----+---------+-------+
+| ic          | char(20) | NO   | PRI | NULL    |       | 
+| goodsname   | char(30) | YES  |     | NULL    |       | 
+| quantity    | char(5)  | YES  |     | NULL    |       | 
+| client      | char(20) | YES  |     | NULL    |       | 
+| destination | char(20) | YES  |     | NULL    |       | 
+| rectelnum   | char(15) | YES  |     | NULL    |       | 
++-------------+----------+------+-----+---------+-------+
+mysql> describe REGISTER;
++-----------+----------+------+-----+---------+-------+
+| Field     | Type     | Null | Key | Default | Extra |
++-----------+----------+------+-----+---------+-------+
+| uname     | char(20) | NO   | PRI | NULL    |       | 
+| password  | char(45) | YES  |     | NULL    |       | 
+| telephone | char(15) | YES  |     | NULL    |       | 
+| regdate   | char(20) | YES  |     | NULL    |       | 
++-----------+----------+------+-----+---------+-------+
+mysql> describe SDISPATCH1;
++--------------+----------+------+-----+---------+-------+
+| Field        | Type     | Null | Key | Default | Extra |
++--------------+----------+------+-----+---------+-------+
+| truckid      | char(5)  | NO   | PRI | NULL    |       | 
+| isidle       | char(5)  | YES  |     | NULL    |       | 
+| destination1 | char(20) | YES  |     | NULL    |       | 
+| destination2 | char(20) | YES  |     | NULL    |       | 
++--------------+----------+------+-----+---------+-------+
+mysql> describe SWAREHOUSE1;
++---------+----------+------+-----+---------+-------+
+| Field   | Type     | Null | Key | Default | Extra |
++---------+----------+------+-----+---------+-------+
+| ic      | char(20) | NO   | PRI | NULL    |       | 
+| intime  | char(20) | YES  |     | NULL    |       | 
+| outtime | char(20) | YES  |     | NULL    |       | 
++---------+----------+------+-----+---------+-------+
+mysql> describe SWAREHOUSE2;
++---------+----------+------+-----+---------+-------+
+| Field   | Type     | Null | Key | Default | Extra |
++---------+----------+------+-----+---------+-------+
+| ic      | char(20) | NO   | PRI | NULL    |       | 
+| intime  | char(20) | YES  |     | NULL    |       | 
+| outtime | char(20) | YES  |     | NULL    |       | 
++---------+----------+------+-----+---------+-------+
+mysql> describe TRUCK0;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| date     | char(20) | YES  |     | NULL    |       | 
+| time     | char(20) | YES  |     | NULL    |       | 
+| latitude | char(10) | YES  |     | NULL    |       | 
+| lonitude | char(10) | YES  |     | NULL    |       | 
+| high     | char(5)  | YES  |     | NULL    |       | 
+| status   | char(2)  | YES  |     | NULL    |       | 
++----------+----------+------+-----+---------+-------+
+mysql> describe TRUCK1;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| date     | char(20) | YES  |     | NULL    |       | 
+| time     | char(20) | YES  |     | NULL    |       | 
+| latitude | char(10) | YES  |     | NULL    |       | 
+| lonitude | char(10) | YES  |     | NULL    |       | 
+| high     | char(5)  | YES  |     | NULL    |       | 
+| status   | char(2)  | YES  |     | NULL    |       | 
++----------+----------+------+-----+---------+-------+
+

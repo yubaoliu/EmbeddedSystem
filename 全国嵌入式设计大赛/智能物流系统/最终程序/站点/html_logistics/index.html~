@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD><TITLE>智能物流系统</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312"><LINK media=all 
+href="智能物流系统.files/base.css" type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2900.5659" name=GENERATOR></HEAD>
+<BODY>
+<DIV id=wrap>
+<SCRIPT src="智能物流系统.files/code.js" type=text/javascript>
+</SCRIPT>
+<DIV>
+<DIV class=logo><A href="http://www.qrnu.edu.cn/800.asp"><IMG height=67 
+src="智能物流系统.files/logo.jpg" width=311></A></DIV>
+<DIV class=top_rig><A><IMG height=67 src="智能物流系统.files/top_rigbg.jpg" width=692></A>
+<DIV class=rad01><A href="http://www.cie-eec.org/bcb/index.htm" target=_blank>博创杯</A>&nbsp;|&nbsp;<A href="http://www.qrnu.edu.cn/800.asp" target=_blank>校园门户系统</A></DIV>
+<DIV class=top_ser1><SPAN class=time>今天是
+<SCRIPT language=JavaScript><!--
+var dayNames = new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+Stamp = new Date();
+document.write("" + Stamp.getFullYear() + "."+(Stamp.getMonth() + 1) +"."+Stamp.getDate()+" " + dayNames[Stamp.getDay()] +"");
+//-->
+</SCRIPT>
+ </SPAN></DIV></DIV><DIV>
+
+<MARQUEE scrollAmount=5 scrollDelay=0 behavior=alternate width=992 height=80>
+<IMG   height=80  src="智能物流系统.files/page_02.jpg"   border=0/> 
+<IMG   height=80 src="智能物流系统.files/page_05.jpg" border=0/> 
+<IMG  height=80 src="智能物流系统.files/page_04.jpg"  border=0/>
+</MARQUEE>
+</div>
+<DIV class="nav">
+<ul>
+  <li><a href="System.html">作品介绍</a> </li>
+  <li><a href="Group.html">团队介绍</a> </li>
+  <li><a href=" gps.html">全球定位模块</a> </li>
+  <li><a href="gprs.html ">无线通讯模块</a></li>
+  <li><a href="service.html ">后台服务器</a> </li>
+  <li><a href="rfid.html">FRID出入库管理</a> </li>
+  <li><a href="che.html" >智能小车</a> </li>
+  <li><a href="ditu.html">电子地图</a> </li>
+  </ul></DIV></DIV>
+<DIV id=content>
+<DIV class=index_left>
+
+<DIV class=img>
+
+<SCRIPT language=JavaScript>
+var photos=new Array()
+var photoslink=new Array()
+var which=0
+//修改下面的图像地址和相应的链接
+photos[0]="智能物流系统.files/ad_r.jpg"
+photos[1]="智能物流系统.files/school.jpg"
+photos[2]="智能物流系统.files/gprs.jpg"
+photos[3]="智能物流系统.files/gps.jpg"
+photos[4]="智能物流系统.files/linux-mysql-php-apache.jpg"
+photos[5]="智能物流系统.files/service.jpg"
+var linkornot=0
+photoslink[0]=""
+photoslink[1]=""
+photoslink[2]=""
+photoslink[3]=""
+photoslink[4]=""
+photoslink[5]=""
+var preloadedimages=new Array()
+for (i=0;i<photos.length;i++){
+preloadedimages[i]=new Image()
+preloadedimages[i].src=photos[i]
+}
+
+
+function applyeffect(){
+if (document.all){
+photoslider.filters.revealTrans.Transition=Math.floor(Math.random()*23)
+photoslider.filters.revealTrans.stop()
+photoslider.filters.revealTrans.apply()
+}
+}
+
+function playeffect(){
+if (document.all)
+photoslider.filters.revealTrans.play()
+}
+
+function keeptrack(){
+window.status="Image "+(which+1)+" of "+photos.length
+}
+
+
+function backward(){
+if (which>0){
+which--
+applyeffect()
+document.images.photoslider.src=photos[which]
+playeffect()
+keeptrack()
+}
+}
+
+function forward(){
+if (which<photos.length-1){
+which++
+applyeffect()
+document.images.photoslider.src=photos[which]
+playeffect()
+keeptrack()
+}
+}
+
+function transport(){
+window.location=photoslink[which]
+}
+
+</SCRIPT>
+
+<SCRIPT>
+if (linkornot==1)
+document.write('<a href="javascript:transport()">')
+document.write('<img src="'+photos[0]+'" name="photoslider" style="filter:revealTrans(duration=2,transition=23)" border=0 onload="return imgzoom(this,600);" onclick="javascript:window.open(this.src);" style="cursor:pointer;"/>')
+if (linkornot==1)
+document.write('</a>')
+</SCRIPT>
+<BR>
+<center><A href="#"    onclick="backward();return true">上一张</A> <A  href="#" onclick="forward();return flase">下一张</A></center>
+
+<SCRIPT type=text/javascript>
+#demo a {
+width:100%;
+overflow:hidden;
+font:12px/16px tahoma;
+display:block;
+text-decoration:none;
+margin:2px;
+color:#4a551c;
+padding-left:2px;
+text-align:left;
+}
+#demo a:hover {
+color:#ff6600;
+}
+<!--
+
+function InputCheck(LoginForm)
+{
+  if (LoginForm.username.value == "")
+  {
+    alert("请输入用户名!");
+    LoginForm.username.focus();
+    return (false);
+  }
+  if (LoginForm.password.value == "")
+  {
+    alert("请输入密码!");
+    LoginForm.password.focus();
+    return (false);
+  }
+}
+
+//-->
+
+</SCRIPT>
+</DIV></DIV>
+<DIV class=index_mid>
+<DIV class=title>
+<H3><A target=_blank> <SPAN>系统简介 System introduction </SPAN></A></H3></DIV>
+<DIV class=con>
+<DIV class=news_list>
+<marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="2" scrolldelay=0 direction="up" height="350"> <FONT lang=ZH-CN face=楷体_GB2312 color=#0000ff 
+size=3>
+&nbsp&nbsp;&nbsp;本系统以博创UP-TECH S2410经典实验箱为核心，结合GPS模块、GPRS模块、RIFD模块，设计实现了现代化的智能物流系统，包括车辆动态定位、货物的批量识别、货物的出入库管理、后台数据服务器、信息web网页显示等功能。融合GPS卫星定位技术、GSM数字移动通信技术、GIS地理信息系统技术以及Internet技术对车辆进行监控、调度、即时定位等多项功能，进而实现车辆实时动态信息动态信息（位置、状态、行驶速度等）的全程监测管理。利用Linux+PHP+Mysql+Apache搭建后台数据服务器，统一管理整个物流系统的数据信息，用户以Web网页形式注册、登陆，实时跟踪货物。本系统充分发挥了物流在整个企业供应链中的作用，实现物流系统的智能化，对提升整个供应链的效率有实际的应用价值。</FONT></marquee>
+</DIV></div></div>
+
+
+<DIV class=index_right>
+<DIV class=user>
+<DIV class=title>
+<H3>货物追踪<SPAN>Cargo tracking</SPAN></H3></DIV>
+<DIV class=con>
+<H3><A href="" target=_blank>用户登录</A></H3><Form name="LoginForm" method="post" action="user_reg/login.php" onSubmit="return InputCheck(this)">
+<UL>
+  <li><span>账&nbsp;&nbsp;号</span><input id="username" name="username" type="text" class="input" /></li>
+  
+  <LI><SPAN>密&nbsp;&nbsp;码</SPAN><input id="password" name="password" type="password" class="input" /> 
+  </LI></UL>
+<DIV class=btn><input type="submit" name="submit" value=" 登  录 " class="left" /></DIV>
+<DIV class=btn><a href="reg.html"><INPUT type=BUTTON src="" value="用户注册"></a></DIV>
+</FORM></DIV></DIV>
+<DIV class=link_list>
+<UL>
+<LI>系统功能
+  <LI>集成性
+  <LI>稳定性
+  <LI>高效性 
+  <LI>环保型 
+  <LI>便捷性
+  <LI>多功能 
+</LI></UL></DIV>
+</DIV>
+
+
+
+<DIV class="ser_footer">版权所有 2011 曲阜师范大学（日照校区） 地址：山东省日照市东港区烟台路80号　 邮编：276826 
+<BR>建设维护：<A href="" 计算机科学学院</A>　　电子邮箱:<A 
+href="mailto:syc109r@163.com">syc109@163.com</A> <BR></DIV></BODY></HTML>

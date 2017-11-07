@@ -1,0 +1,62 @@
+import java.sql.*;   
+  
+public class TestJDBC {   
+  
+    public static void main(String[] args) {   
+        ResultSet rs = null;   
+        Statement stmt = null;   
+        Connection conn = null;   
+        try {   
+            String URL = "jdbc:mysql://127.0.0.1:3306/multi";   
+            String user = "root";   
+            String password = "123";   
+            Class.forName("com.mysql.jdbc.Driver");   
+            conn = DriverManager.getConnection(URL, user, password);   
+            stmt = conn.createStatement();   
+            rs = stmt.executeQuery("SELECT Rbh,Rgly,Rlx,Rbz FROM RJBB");   
+            while (rs.next()) {   
+                System.out.print(rs.getString("Rbh"));   
+                System.out.print(rs.getString("Rgly") + "  ");   
+                System.out.print(rs.getString("Rlx") + "  ");   
+                System.out.print(rs.getString("Rbz") + "  ");   
+                System.out.print("\n");   
+            }   
+        } catch (ClassNotFoundException e) {   
+            e.printStackTrace();   
+        } catch (SQLException e) {   
+            e.printStackTrace();   
+        } finally {   
+            try {   
+                if (rs != null) {   
+                    rs.close();   
+                    rs = null;   
+                }   
+                if (stmt != null) {   
+                    stmt.close();   
+                    stmt = null;   
+                }   
+                if (conn != null) {   
+                    conn.close();   
+                    conn = null;   
+                }   
+            } catch (SQLException e) {   
+                e.printStackTrace();   
+            }   
+        }   
+    }   
+  
+}  
+#Java Environment
+
+
+ JAVA_HOME=/usr/lib/jvm/jdk-1.6.0.0
+
+JRE_HOME=$JAVA_HOME/jre
+
+
+CLASSPATH=.:$JAVA_HOME/lib/mysql-connector-java-3.1.12.jar:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JRE_HOME/lib/rt.jar
+
+ PATH=$JAVA_HOME/bin:$PATH
+
+export JAVA_HOME JRE_HOME CLASSPATH PATH
+

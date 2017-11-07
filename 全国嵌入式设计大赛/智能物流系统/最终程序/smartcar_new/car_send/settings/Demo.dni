@@ -1,0 +1,48 @@
+[DebugChecksum]
+Checksum=-1311101005
+[DisAssemblyWindow]
+NumStates=_ 1
+State 1=_ 1
+[InstructionProfiling]
+Enabled=_ 0
+[CodeCoverage]
+Enabled=_ 0
+[Profiling]
+Enabled=0
+[StackPlugin]
+Enabled=1
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnHow=0
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[DriverProfiling]
+Enabled=0
+Source=2
+Graph=0
+[Disassemble mode]
+mode=1
+[Breakpoints]
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\NRF24L01.c}.142.6@1" 1 0 0 0 "" 0 ""
+Count=1
+[Aliases]
+A0=_ "C:\Documents and Settings\asus\桌面\smartcar\car_send\main.c" ""
+A1=_ "C:\Documents and Settings\asus\桌面\smartcar\car_send\startup_ewarm.c" ""
+A2=_ "C:\Documents and Settings\asus\桌面\smartcar\car_send\systemInit.c" ""
+A3=_ "C:\Documents and Settings\asus\桌面\smartcar\car_send\uartGetPut.c" ""
+A4=_ "F:\logistics\smartlogistics5.11\smartcar\car_send\main.c" ""
+A5=_ "F:\logistics\smartlogistics5.11\smartcar\car_send\startup_ewarm.c" ""
+A6=_ "F:\logistics\smartlogistics5.11\smartcar\car_send\systemInit.c" ""
+A7=_ "F:\logistics\smartlogistics5.11\smartcar\car_send\uartGetPut.c" ""
+Count=8
+SuppressDialog=0

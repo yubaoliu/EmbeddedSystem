@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0082)http://www.zjtcm.net/wljx/Computer/Data%20Structure/Tsinghua/lesson/ch01/0101.html -->
+<HTML><HEAD><TITLE>RFID模块</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb_2312-80">
+<META content="MSHTML 6.00.2900.5583" name=GENERATOR>
+<META content="none, default" name="Microsoft Border"></HEAD>
+<style type="text/css">
+body
+{ 
+background: url('worker/back2.jpg') no-repeat fixed center; 
+}
+</style>
+<BODY><B><FONT lang=ZH-CN face=楷体_GB2312 
+color=#ffffff size=5>
+<P align=center>RFID出入库管理</P></FONT>
+<FONT color=#ffffff size=4>
+<center><div>
+<TABLE cellSpacing=2 cellPadding=2 width="80%" border=1><center>
+<P align=justify></B>&nbsp&nbsp;&nbsp;&nbsp;</font><B><FONT lang=ZH-CN face=楷体_GB2312 
+color=#ffffff>物流是将货物保障、运输、撰写、搬运、储存、加工、配送、信息处理等基本功能环节实施有机整合的系统过程，本系统亦不外乎如此。RFID技术在本物流系统中主要完成货物的识别实现出库入库、车辆的识别进行车辆的调度。RFID识别模块由电子标签、读写器、天线以及嵌入式系统组成如下图所示。<br/><center><img src="worker/rfid1.jpg"/ ></center>
+&nbsp;&nbsp;&nbsp;&nbsp;RFID系统是电子标签电子标签是系统中可移动的部分，它贴附于标识物上，存储有识别信息或加密校验等附加信息，当它通过读写器控制区域时，将接收读写器发来的信号并自动做出应答，读写器接收来自标签的信号。借助天线的电磁耦合实现数据和能量的交换电子标签是 RFID 技术的核心部分。读写器具备读取和写入标签信息功能的设备可设计为手持式或固定式。主要任务是控制射频模块向标签发射读取信号，并接收标签的应答信号，对标签的对象标识信息进行解码，将对象标识信息连带标签上的其他相关的信息传输到主机以供处理。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;本系统我们选用非接触型 IC 卡作为电子标签来记录信息。IC卡(Integrated Circuitcard)，又叫智能卡(Smartcard)，它将一个集成电路芯片镶嵌于塑料基片中。由于其内部具有现代高科技产品集成电路不但可以存储大量信息，具有极强的保密性能，并且抗干扰、无磨损、寿命长，因此在广泛的领域中得到应用。它将微电子技术和计算机技术结合在一起，提高了人们生活和工作的现代化程度。IC 卡芯片具有写入数据和存储数据的能力，IC 卡存储器中的内容根据需要可以有条件的供外部读取和供内部进行信息处理。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;本系统在入库管理中，有关人员将入库货物信息预先匹配相应的IC卡号，将其输入到计算机控制中心，生成预入库信息表存储在后台数据库中。入库管理员将对应的IC卡粘贴在相应货物的表面；在出库管理中，当货物需要调出时，根据客户需求选取货物装车，货物出库时，同入库一样，通过门口安装的射频读卡器，对车辆及车上的货物名称、客户及数量等相关信息进行再次扫描校对，货物信息传入到后台数据库与发货单进行校对，若无误则顺利出库；若出错则提示相应信息。后台数据库根据出库情况自动更新管理，并保留出库信息，并提供相应的出库信息查询功能，为各部门及客户及时了解出库情况提供方便。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;这样，无论是出库还是入库，通过RFID技术可以实现货物及车辆的可视化、即时化管理。
+<br/>
+</P></FONT><center><img src="worker/RFID.jpg"/ ><BR/>
+<center>RFID模块（型号：UP-RFID）</center></center></table></center>
+<center><A href="index.html"    onclick="back">返回</A></center>
+</BODY></HTML>

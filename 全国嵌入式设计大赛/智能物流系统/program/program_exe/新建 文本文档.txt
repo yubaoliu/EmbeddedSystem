@@ -1,0 +1,6 @@
+database_connect.php  :mysql 与数据库进行连接成功pyp程序，读取receive.txt中的数据，并写入数据库
+file.php 用php网页每隔30s读取receive.txt中的文件，并显示在网页中
+receive.txt  文件是货车端用gps定位后，用gprs 发射给监控端数据。
+gprs_receive  用gprs  接收gprs_send发送的数据并存放于receive.txt中
+gprs_send  gprs 发送gps定位的数据，即存于data.txt文件中的数据
+gps       gps定位程序，定位的数据并存于data.txt文件中

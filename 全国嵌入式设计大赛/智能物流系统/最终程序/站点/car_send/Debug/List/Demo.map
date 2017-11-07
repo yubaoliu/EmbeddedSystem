@@ -1,0 +1,274 @@
+###############################################################################
+#                                                                             #
+# IAR ELF Linker V5.41.0.51741/W32 for ARM              04/Jun/2011  11:50:34 #
+# Copyright (C) 2007-2009 IAR Systems AB.                                     #
+#                                                                             #
+#    Output file  =  F:\logistics\smartlogistics5.11\smartcar\car_send\Debug\ #
+#                    Exe\Demo.out                                             #
+#    Map file     =  F:\logistics\smartlogistics5.11\smartcar\car_send\Debug\ #
+#                    List\Demo.map                                            #
+#    Command line =  "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    5.4\arm\lib\Luminary\driverlib.a"                        #
+#                    F:\logistics\smartlogistics5.11\smartcar\car_send\Debug\ #
+#                    Obj\NRF24L01.o F:\logistics\smartlogistics5.11\smartcar\ #
+#                    car_send\Debug\Obj\main.o F:\logistics\smartlogistics5.1 #
+#                    1\smartcar\car_send\Debug\Obj\startup_ewarm.o            #
+#                    F:\logistics\smartlogistics5.11\smartcar\car_send\Debug\ #
+#                    Obj\systemInit.o F:\logistics\smartlogistics5.11\smartca #
+#                    r\car_send\Debug\Obj\uartGetPut.o -o                     #
+#                    F:\logistics\smartlogistics5.11\smartcar\car_send\Debug\ #
+#                    Exe\Demo.out --map F:\logistics\smartlogistics5.11\smart #
+#                    car\car_send\Debug\List\Demo.map --config "C:\Program    #
+#                    Files\IAR Systems\Embedded Workbench                     #
+#                    5.4\arm\config\Luminary\LM3S.icf" --semihosting --entry  #
+#                    __iar_program_start                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at start of [0x00000000-0x0003ffff] { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x2000ffff] { rw, block HEAP };
+
+  Section            Kind        Address   Size  Object
+  -------            ----        -------   ----  ------
+"A1":                                     0x100
+  .intvec            const    0x00000000  0x100  startup_ewarm.o [1]
+                            - 0x00000100  0x100
+
+"P1":                                     0xda0
+  .text              ro code  0x00000100  0x444  NRF24L01.o [1]
+  .text              ro code  0x00000544  0x324  sysctl.o [4]
+  .text              ro code  0x00000868  0x2a4  gpio.o [4]
+  .text              ro code  0x00000b0c   0x88  interrupt.o [4]
+  .text              ro code  0x00000b94   0x74  ssi.o [4]
+  .text              ro code  0x00000c08   0x6c  uart.o [4]
+  .rodata            const    0x00000c74   0x5c  sysctl.o [4]
+  .text              ro code  0x00000cd0   0x50  systemInit.o [1]
+  .text              ro code  0x00000d20   0x40  uartGetPut.o [1]
+  .text              ro code  0x00000d60   0x24  copy_init2.o [5]
+  .iar.init_table    const    0x00000d84   0x24  - Linker created -
+  .text              ro code  0x00000da8   0x20  data_init2.o [5]
+  .text              ro code  0x00000dc8   0x20  main.o [1]
+  .text              ro code  0x00000de8   0x1c  iarwstd.o [6]
+  .text              ro code  0x00000e04   0x1a  zero_init2.o [5]
+  .text              ro code  0x00000e20   0x18  cmain.o [5]
+  .text              ro code  0x00000e38   0x14  exit.o [6]
+  CODE               ro code  0x00000e4c   0x14  cpu.o [4]
+  .rodata            const    0x00000e60    0xc  sysctl.o [4]
+  .text              ro code  0x00000e6c    0xc  I32DivMod.o [5]
+  .text              ro code  0x00000e78    0xa  cexit.o [5]
+  .text              ro code  0x00000e82    0x6  startup_ewarm.o [1]
+  .text              ro code  0x00000e88    0x6  exit.o [3]
+  .text              ro code  0x00000e8e    0x4  low_level_init.o [3]
+  Initializer bytes  ro data  0x00000e94    0xc  <for P2 s0>
+                            - 0x00000ea0  0xda0
+
+"P2", part 1 of 3:                        0x400
+  .noinit            uninit   0x20000000  0x400  startup_ewarm.o [1]
+                            - 0x20000400  0x400
+
+"P2", part 2 of 3:                          0xc
+  P2 s0                       0x20000400    0xc  <Init block>
+    .data            inited   0x20000400    0x8  NRF24L01.o [1]
+    .data            inited   0x20000408    0x4  systemInit.o [1]
+                            - 0x2000040c    0xc
+
+"P2", part 3 of 3:                         0x48
+  .bss               zero     0x2000040c   0x14  NRF24L01.o [1]
+  .bss               zero     0x20000420    0xc  NRF24L01.o [1]
+  .bss               zero     0x2000042c    0xc  NRF24L01.o [1]
+  .bss               zero     0x20000438    0xc  NRF24L01.o [1]
+  .bss               zero     0x20000444    0x4  NRF24L01.o [1]
+  .bss               zero     0x20000448    0x4  NRF24L01.o [1]
+  .bss               zero     0x2000044c    0x4  iarwstd.o [6]
+  .bss               zero     0x20000450    0x1  NRF24L01.o [1]
+                            - 0x20000451   0x45
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init2)
+    1 destination range, total size 0x45:
+          0x2000040c  0x45
+
+Copy (__iar_copy_init2)
+    1 source range, total size 0xc (100% of destination):
+          0x00000e94   0xc
+    1 destination range, total size 0xc:
+          0x20000400   0xc
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+F:\logistics\smartlogistics5.11\smartcar\car_send\Debug\Obj: [1]
+    NRF24L01.o          1 092        8       73
+    main.o                 32
+    startup_ewarm.o         6      256    1 024
+    systemInit.o           80        4        4
+    uartGetPut.o           64
+    -------------------------------------------
+    Total:              1 274      268    1 101
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tl_in.a: [3]
+    exit.o                  6
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                 10
+
+driverlib.a: [4]
+    cpu.o                  20
+    gpio.o                676
+    interrupt.o           136
+    ssi.o                 116
+    sysctl.o              804      104
+    uart.o                108
+    -------------------------------------------
+    Total:              1 860      104
+
+rt7M_tl.a: [5]
+    I32DivMod.o            12
+    cexit.o                10
+    cmain.o                24
+    copy_init2.o           36
+    data_init2.o           32
+    zero_init2.o           26
+    -------------------------------------------
+    Total:                140
+
+shb_l.a: [6]
+    exit.o                 20
+    iarwstd.o              28                 4
+    -------------------------------------------
+    Total:                 48                 4
+
+    Gaps                    2
+    Linker created                  38
+-----------------------------------------------
+    Grand Total:        3 334      410    1 105
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+Action                  0x000001b9   0x34  Code  Gb  NRF24L01.o [1]
+CE                      0x20000420    0xc  Data  Gb  NRF24L01.o [1]
+CPUcpsid                0x00000e4d         Code  Gb  cpu.o [4]
+CPUcpsie                0x00000e55         Code  Gb  cpu.o [4]
+CPUwfi                  0x00000e5d         Code  Gb  cpu.o [4]
+CSN                     0x2000042c    0xc  Data  Gb  NRF24L01.o [1]
+FaultISR                0x00000e85    0x2  Code  Lc  startup_ewarm.o [1]
+GPIODirModeSet          0x00000869   0x4c  Code  Gb  gpio.o [4]
+GPIOIntTypeSet          0x000008b5   0x62  Code  Gb  gpio.o [4]
+GPIOPadConfigSet        0x00000919  0x11e  Code  Gb  gpio.o [4]
+GPIOPinIntClear         0x00000a61    0x8  Code  Gb  gpio.o [4]
+GPIOPinIntEnable        0x00000a39   0x12  Code  Gb  gpio.o [4]
+GPIOPinIntStatus        0x00000a4d   0x14  Code  Gb  gpio.o [4]
+GPIOPinRead             0x00000a69    0x8  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOInput    0x00000a7d   0x24  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOOutput   0x00000aa1   0x24  Code  Gb  gpio.o [4]
+GPIOPinTypeSSI          0x00000ac5   0x24  Code  Gb  gpio.o [4]
+GPIOPinTypeUART         0x00000ae9   0x24  Code  Gb  gpio.o [4]
+GPIOPinWrite            0x00000a71    0xa  Code  Gb  gpio.o [4]
+GPIO_Port_A_ISR         0x0000047f   0x4e  Code  Gb  NRF24L01.o [1]
+GPIO_Port_D_ISR         0x00000165   0x2a  Code  Gb  NRF24L01.o [1]
+GPIO_Port_G_ISR         0x0000018f   0x2a  Code  Gb  NRF24L01.o [1]
+IRQ                     0x20000438    0xc  Data  Gb  NRF24L01.o [1]
+IntDefaultHandler       0x00000e87    0x2  Code  Lc  startup_ewarm.o [1]
+IntEnable               0x00000b19   0x74  Code  Gb  interrupt.o [4]
+IntMasterEnable         0x00000b0d    0xc  Code  Gb  interrupt.o [4]
+KeyInit                 0x00000101   0x64  Code  Gb  NRF24L01.o [1]
+LedInit                 0x000004cd   0x1c  Code  Gb  NRF24L01.o [1]
+LedOff                  0x000004f7    0xe  Code  Gb  NRF24L01.o [1]
+LedOn                   0x000004e9    0xe  Code  Gb  NRF24L01.o [1]
+NRF_IO_Clr              0x0000022d   0x10  Code  Gb  NRF24L01.o [1]
+NRF_IO_Enable           0x000001f5    0xc  Code  Gb  NRF24L01.o [1]
+NRF_IO_In               0x00000201    0xe  Code  Gb  NRF24L01.o [1]
+NRF_IO_Init             0x0000023d   0x8e  Code  Gb  NRF24L01.o [1]
+NRF_IO_MemberSet        0x000001ed    0x8  Code  Gb  NRF24L01.o [1]
+NRF_IO_Out              0x0000020f    0xe  Code  Gb  NRF24L01.o [1]
+NRF_IO_Set              0x0000021d   0x10  Code  Gb  NRF24L01.o [1]
+NmiSR                   0x00000e83    0x2  Code  Lc  startup_ewarm.o [1]
+Region$$Table$$Base     0x00000d84          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00000da8          --   Gb  - Linker created -
+SPI_RW                  0x00000355   0x20  Code  Gb  NRF24L01.o [1]
+SPI_RW_Reg              0x00000375   0x2a  Code  Gb  NRF24L01.o [1]
+SPI_Read                0x0000039f   0x26  Code  Gb  NRF24L01.o [1]
+SPI_Write_Buf           0x000003c5   0x44  Code  Gb  NRF24L01.o [1]
+SSIConfigSetExpClk      0x00000b95   0x4e  Code  Gb  ssi.o [4]
+SSIDataGet              0x00000bfd    0xc  Code  Gb  ssi.o [4]
+SSIDataPut              0x00000bf1    0xa  Code  Gb  ssi.o [4]
+SSIEnable               0x00000be5    0xa  Code  Gb  ssi.o [4]
+SysCtlClockGet          0x0000071d  0x14c  Code  Gb  sysctl.o [4]
+SysCtlClockSet          0x000005ad  0x170  Code  Gb  sysctl.o [4]
+SysCtlDelay             0x000005a5    0x8  Code  Gb  sysctl.o [4]
+SysCtlLDOSet            0x00000599    0x6  Code  Gb  sysctl.o [4]
+SysCtlPeripheralDisable
+                        0x0000056d   0x26  Code  Gb  sysctl.o [4]
+SysCtlPeripheralEnable  0x00000545   0x26  Code  Gb  sysctl.o [4]
+TX_ADDRESS              0x20000400    0x8  Data  Gb  NRF24L01.o [1]
+TX_Mode                 0x00000409   0x76  Code  Gb  NRF24L01.o [1]
+TheSysClock             0x20000408    0x4  Data  Gb  systemInit.o [1]
+UARTConfigSetExpClk     0x00000c09   0x38  Code  Gb  uart.o [4]
+UARTDisable             0x00000c59   0x1c  Code  Gb  uart.o [4]
+UARTEnable              0x00000c41   0x18  Code  Gb  uart.o [4]
+__aeabi_uidivmod        0x00000e6d         Code  Gb  I32DivMod.o [5]
+__exit                  0x00000e39   0x14  Code  Gb  exit.o [6]
+__iar_copy_init2        0x00000d61   0x24  Code  Gb  copy_init2.o [5]
+__iar_data_init2        0x00000da9   0x20  Code  Gb  data_init2.o [5]
+__iar_program_start     0x00000e21         Code  Gb  cmain.o [5]
+__iar_sh_stdout_close   0x00000de9   0x16  Code  Gb  iarwstd.o [6]
+__iar_sh_stdout_handle  0x2000044c    0x4  Data  Lc  iarwstd.o [6]
+__iar_zero_init2        0x00000e05   0x1a  Code  Gb  zero_init2.o [5]
+__low_level_init        0x00000e8f    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000  0x100  Data  Gb  startup_ewarm.o [1]
+_exit                   0x00000e79         Code  Gb  cexit.o [5]
+_main                   0x00000e33         Code  Gb  cmain.o [5]
+clockInit               0x00000cf7   0x18  Code  Gb  systemInit.o [1]
+exit                    0x00000e89    0x6  Code  Gb  exit.o [3]
+g_pulRCGCRegs           0x00000e60    0xc  Data  Lc  sysctl.o [4]
+g_pulXtals              0x00000c74   0x5c  Data  Lc  sysctl.o [4]
+init_io                 0x00000339   0x1c  Code  Gb  NRF24L01.o [1]
+jtagWait                0x00000cd1   0x26  Code  Gb  systemInit.o [1]
+key1                    0x20000444    0x4  Data  Gb  NRF24L01.o [1]
+key2                    0x20000448    0x4  Data  Gb  NRF24L01.o [1]
+main                    0x00000dc9   0x20  Code  Gb  main.o [1]
+pulStack                0x20000000  0x400  Data  Lc  startup_ewarm.o [1]
+ssiInit                 0x000002cb   0x6e  Code  Gb  NRF24L01.o [1]
+sta                     0x20000450    0x1  Data  Gb  NRF24L01.o [1]
+tx_buf                  0x2000040c   0x14  Data  Gb  NRF24L01.o [1]
+uartInit                0x00000d21   0x30  Code  Gb  uartGetPut.o [1]
+
+
+[1] = F:\logistics\smartlogistics5.11\smartcar\car_send\Debug\Obj
+[2] = command line
+[3] = dl7M_tl_in.a
+[4] = driverlib.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  3 334 bytes of readonly  code memory
+    410 bytes of readonly  data memory
+  1 105 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

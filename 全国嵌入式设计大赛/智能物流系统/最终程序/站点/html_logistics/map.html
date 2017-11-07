@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD>
+ <title>GPS电子地图 </title>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<BODY>
+    <script src="http://ditu.google.cn/maps?file=api&amp;v=2&amp;key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA&hl=zh-CN"
+            type="text/javascript"></script>
+
+    <script type="text/javascript">
+    
+    function initialize() {
+// Create our "tiny" marker icon
+var icon = new GIcon();
+icon.image = "智能物流系统.files/che.png";
+icon.iconSize = new GSize(30, 30);
+icon.shadowSize = new GSize(22, 20);
+icon.iconAnchor = new GPoint(6, 20);
+icon.infoWindowAnchor = new GPoint(5, 1);
+
+        var map = new GMap2(document.getElementById("map_canvas"));
+
+       map.setCenter(new GLatLng(document.getElementById("jingdu").value,document.getElementById	("weidu").value), 5);
+
+
+   
+
+
+
+ 	var latlng = new GLatLng(document.getElementById("jingdu").value,document.getElementById	("weidu").value);
+
+var marker=new GMarker(latlng, icon);
+	map.addOverlay(marker);
+
+ var html = "车号:"+"TRUCK0"+"<br/>"+"经度:"+document.getElementById("jingdu").value+"<br/>"+"纬度:       "+document.getElementById("weidu").value;
+
+  marker.openInfoWindowHtml(html);
+
+  map.addControl(new GSmallMapControl());
+  map.addControl(new GMapTypeControl());
+  map.addControl(new LargeMapControl());
+
+  var ArrayPolyPoints = new Array(); 
+
+    ArrayPolyPoints[0] = new GLatLng(33.92, -51.385);     
+     ArrayPolyPoints[1] = new GLatLng(52.93, -76.389);       
+   ArrayPolyPoints[2] = new GLatLng(75.94, -89.395);       
+   var mypoly = new GPolyline(ArrayPolyPoints,'#000066',3,5,  {geodesic:true});       
+    map.addOverlay(mypoly);  
+
+
+var polyline = new GPolyline([new GPoint(35.1419, 100.4419),
+                              new GPoint(100.1519, 200.4519)],
+                              "#ff0000", 10);
+map.addOverlay(polyline);
+
+
+
+    }
+
+    </script>
+  </head>
+  <body onload="initialize()" onunload="GUnload()">
+<center><font color=#ff4500 face=隶书 size=5>GPS电子地图</font>
+<form id="myForm"   method="get">
+经度:<input type="text" id="jingdu" name="jingdu" size="20">
+纬度:<input type="text" id="weidu" name="weidu" size="20"><br/>
+
+<input type="button" onclick="initialize()" value=" 提 交 ">
+</form></center>
+
+
+<center>    <div id="map_canvas" style="width: 800px; height: 500px"></div></center>
+
+ <script type="text/javascript">
+  map.addControl(new GSmallMapControl());
+  map.addControl(new GMapTypeControl());
+  map.centerAndZoom(new GPoint(139.7600, 35.6700), 1);
+      //]]>
+   </script>
+
+  </body>
+</body>
+</html>

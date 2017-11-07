@@ -1,0 +1,3 @@
+linux vmware: 219.218.22.66
+windows : 219.218.22.35
+vmnet1 :当windows共享后保持默认

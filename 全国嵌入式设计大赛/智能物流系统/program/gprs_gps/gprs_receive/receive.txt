@@ -1,0 +1,6 @@
+#DATE: 1945--10--44 
+TIME: 06:-44:-43 
+Latitude:0.0000 ,
+Lonitude:0.0000 ,
+high:0.0000 
+STATUS:V

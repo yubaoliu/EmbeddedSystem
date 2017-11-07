@@ -1,0 +1,127 @@
+!SESSION 2011-06-04 08:54:59.226 -----------------------------------------------
+eclipse.buildId=M20080911-1700
+java.version=1.6.0_0
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=zh_CN
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:40.365
+!MESSAGE NLS unused message: JavaEditorPreferencePage_fillArgumentNamesOnMethodCompletion in: org.eclipse.jdt.internal.ui.preferences.PreferencesMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:40.365
+!MESSAGE NLS unused message: JavaEditorPreferencePage_guessArgumentNamesOnMethodCompletion in: org.eclipse.jdt.internal.ui.preferences.PreferencesMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:40.365
+!MESSAGE NLS unused message: JavaEditorPreferencePage_backgroundForCompletionProposals in: org.eclipse.jdt.internal.ui.preferences.PreferencesMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:40.365
+!MESSAGE NLS unused message: JavaEditorPreferencePage_foregroundForCompletionProposals in: org.eclipse.jdt.internal.ui.preferences.PreferencesMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:45.326
+!MESSAGE NLS unused message: SourceActionDialog_first_method in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:45.327
+!MESSAGE NLS unused message: SourceActionDialog_last_method in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:45.327
+!MESSAGE NLS unused message: SourceActionDialog_cursor in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:45.328
+!MESSAGE NLS unused message: FormatAllAction_status_description in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:45.328
+!MESSAGE NLS unused message: FormatAllAction_multi_status_title in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:45.328
+!MESSAGE NLS unused message: FormatAllAction_error_title in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:45.329
+!MESSAGE NLS unused message: FormatAllAction_error_message in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:45.329
+!MESSAGE NLS unused message: FormatAllAction_operation_description in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:45.329
+!MESSAGE NLS unused message: FormatAllAction_EmptySelection_title in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:45.329
+!MESSAGE NLS unused message: FormatAllAction_EmptySelection_description in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:45.329
+!MESSAGE NLS unused message: FormatAllAction_noundo_title in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:45.330
+!MESSAGE NLS unused message: FormatAllAction_noundo_message in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:55:47.373
+!MESSAGE NLS unused message: UserValidationDialog_7 in: org.eclipse.team.internal.ccvs.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:57:05.493
+!MESSAGE NLS unused message: CopyToClipboardAction_0 in: org.eclipse.jdt.internal.ui.refactoring.reorg.ReorgMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 08:57:05.493
+!MESSAGE NLS unused message: CopyToClipboardAction_1 in: org.eclipse.jdt.internal.ui.refactoring.reorg.ReorgMessages
+!SESSION 2011-06-04 09:01:19.406 -----------------------------------------------
+eclipse.buildId=M20080911-1700
+java.version=1.6.0_0
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=zh_CN
+Framework arguments:  /var/www/html/java/logistics/src/logistics/logistics.java
+Command-line arguments:  -os linux -ws gtk -arch x86 /var/www/html/java/logistics/src/logistics/logistics.java
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:45.905
+!MESSAGE NLS unused message: JavaEditorPreferencePage_fillArgumentNamesOnMethodCompletion in: org.eclipse.jdt.internal.ui.preferences.PreferencesMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:45.905
+!MESSAGE NLS unused message: JavaEditorPreferencePage_guessArgumentNamesOnMethodCompletion in: org.eclipse.jdt.internal.ui.preferences.PreferencesMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:45.906
+!MESSAGE NLS unused message: JavaEditorPreferencePage_backgroundForCompletionProposals in: org.eclipse.jdt.internal.ui.preferences.PreferencesMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:45.906
+!MESSAGE NLS unused message: JavaEditorPreferencePage_foregroundForCompletionProposals in: org.eclipse.jdt.internal.ui.preferences.PreferencesMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.008
+!MESSAGE NLS unused message: SourceActionDialog_first_method in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.008
+!MESSAGE NLS unused message: SourceActionDialog_last_method in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.008
+!MESSAGE NLS unused message: SourceActionDialog_cursor in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.009
+!MESSAGE NLS unused message: FormatAllAction_status_description in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.009
+!MESSAGE NLS unused message: FormatAllAction_multi_status_title in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.010
+!MESSAGE NLS unused message: FormatAllAction_error_title in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.010
+!MESSAGE NLS unused message: FormatAllAction_error_message in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.010
+!MESSAGE NLS unused message: FormatAllAction_operation_description in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.010
+!MESSAGE NLS unused message: FormatAllAction_EmptySelection_title in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.011
+!MESSAGE NLS unused message: FormatAllAction_EmptySelection_description in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.011
+!MESSAGE NLS unused message: FormatAllAction_noundo_title in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.011
+!MESSAGE NLS unused message: FormatAllAction_noundo_message in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.192
+!MESSAGE NLS unused message: CopyToClipboardAction_0 in: org.eclipse.jdt.internal.ui.refactoring.reorg.ReorgMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:48.192
+!MESSAGE NLS unused message: CopyToClipboardAction_1 in: org.eclipse.jdt.internal.ui.refactoring.reorg.ReorgMessages
+
+!ENTRY org.eclipse.osgi 2 1 2011-06-04 09:01:57.149
+!MESSAGE NLS unused message: UserValidationDialog_7 in: org.eclipse.team.internal.ccvs.ui.messages

@@ -1,0 +1,1 @@
+#TRUCK1$DATE$1947--10--44$TIME$19:15:13$Latitude$0.0000 ,$Lonitude$0.0000 ,$high$0.0000$STATUS$V
