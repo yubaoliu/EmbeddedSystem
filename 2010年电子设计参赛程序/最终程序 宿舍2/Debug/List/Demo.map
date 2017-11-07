@@ -1,0 +1,567 @@
+###############################################################################
+#                                                                             #
+# IAR ELF Linker V5.40.0.51500/W32 for ARM              25/Sep/2010  03:19:50 #
+# Copyright (C) 2007-2009 IAR Systems AB.                                     #
+#                                                                             #
+#    Output file  =  L:\所有程序备份\最终程序 宿舍2\Debug\Exe\Demo.out        #
+#    Map file     =  L:\所有程序备份\最终程序 宿舍2\Debug\List\Demo.map       #
+#    Command line =  "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    5.4\arm\lib\Luminary\driverlib.a"                        #
+#                    "L:\所有程序备份\最终程序 宿舍2\Debug\Obj\LCD12864.o"    #
+#                    "L:\所有程序备份\最终程序 宿舍2\Debug\Obj\NRF24L01.o"    #
+#                    "L:\所有程序备份\最终程序 宿舍2\Debug\Obj\ZLG7289.o"     #
+#                    "L:\所有程序备份\最终程序 宿舍2\Debug\Obj\buzzer.o"      #
+#                    "L:\所有程序备份\最终程序 宿舍2\Debug\Obj\count.o"       #
+#                    "L:\所有程序备份\最终程序 宿舍2\Debug\Obj\human.o"       #
+#                    "L:\所有程序备份\最终程序 宿舍2\Debug\Obj\main.o"        #
+#                    "L:\所有程序备份\最终程序 宿舍2\Debug\Obj\melt.o"        #
+#                    "L:\所有程序备份\最终程序 宿舍2\Debug\Obj\mq.o"          #
+#                    "L:\所有程序备份\最终程序 宿舍2\Debug\Obj\password.o"    #
+#                    "L:\所有程序备份\最终程序 宿舍2\Debug\Obj\setMode.o"     #
+#                    "L:\所有程序备份\最终程序 宿舍2\Debug\Obj\startup_ewarm. #
+#                    o" "L:\所有程序备份\最终程序                             #
+#                    宿舍2\Debug\Obj\systemInit.o" "L:\所有程序备份\最终程序  #
+#                    宿舍2\Debug\Obj\temp.o" "L:\所有程序备份\最终程序        #
+#                    宿舍2\Debug\Obj\tick.o" "L:\所有程序备份\最终程序        #
+#                    宿舍2\Debug\Obj\uartGetPut.o" -o                         #
+#                    "L:\所有程序备份\最终程序 宿舍2\Debug\Exe\Demo.out"      #
+#                    --map "L:\所有程序备份\最终程序                          #
+#                    宿舍2\Debug\List\Demo.map" --config "C:\Program          #
+#                    Files\IAR Systems\Embedded Workbench                     #
+#                    5.4\arm\config\Luminary\LM3S.icf" --semihosting --entry  #
+#                    __iar_program_start                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+__endian      = little
+__thumb_aware = enabled
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at start of [0x00000000-0x0003ffff] { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x2000ffff] { rw, block HEAP };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A1":                                      0x100
+  .intvec            const    0x00000000   0x100  startup_ewarm.o [1]
+                            - 0x00000100   0x100
+
+"P1":                                     0x49d8
+  .text              ro code  0x00000100   0xf14  main.o [1]
+  .text              ro code  0x00001014   0xc92  xprintffull.o [3]
+  .text              ro code  0x00001ca8   0x520  NRF24L01.o [1]
+  .text              ro code  0x000021c8   0x364  sysctl.o [4]
+  .text              ro code  0x0000252c   0x324  temp.o [1]
+  .text              ro code  0x00002850   0x2e0  LCD12864.o [1]
+  .text              ro code  0x00002b30   0x2c8  gpio.o [4]
+  .text              ro code  0x00002df8   0x246  DblDiv.o [5]
+  .text              ro code  0x00003040   0x1f8  count.o [1]
+  .text              ro code  0x00003238   0x1a2  DblMul.o [5]
+  .text              ro code  0x000033dc   0x194  ZLG7289.o [1]
+  .text              ro code  0x00003570   0x17e  DblSub.o [5]
+  .text              ro code  0x000036f0   0x168  tick.o [1]
+  .text              ro code  0x00003858   0x164  mq.o [1]
+  .text              ro code  0x000039bc   0x12e  I64DivMod.o [5]
+  .text              ro code  0x00003aec   0x10c  xdscale.o [3]
+  .text              ro code  0x00003bf8    0xf8  human.o [1]
+  .text              ro code  0x00003cf0    0xf4  setMode.o [1]
+  .text              ro code  0x00003de4    0xe8  adc.o [4]
+  .text              ro code  0x00003ecc    0xe6  DblAdd.o [5]
+  .text              ro code  0x00003fb2    0xb4  xdnorm.o [3]
+  .text              ro code  0x00004068    0xa8  buzzer.o [1]
+  .text              ro code  0x00004110    0x88  interrupt.o [4]
+  .text              ro code  0x00004198    0x80  password.o [1]
+  .text              ro code  0x00004218    0x74  ssi.o [4]
+  .text              ro code  0x0000428c    0x70  ABImemcpy.o [5]
+  .text              ro code  0x000042fc    0x6c  uart.o [4]
+  .text              ro code  0x00004368    0x60  timer.o [4]
+  .rodata            const    0x000043c8    0x5c  sysctl.o [4]
+  .text              ro code  0x00004424    0x58  memchr.o [5]
+  .text              ro code  0x0000447c    0x56  DblToI32.o [5]
+  .text              ro code  0x000044d4    0x50  systemInit.o [1]
+  .text              ro code  0x00004524    0x44  melt.o [1]
+  .text              ro code  0x00004568    0x40  uartGetPut.o [1]
+  .text              ro code  0x000045a8    0x36  strlen.o [5]
+  .text              ro code  0x000045e0    0x30  systick.o [4]
+  .text              ro code  0x00004610    0x30  sprintf.o [3]
+  .text              ro code  0x00004640    0x2e  DblCmpLe.o [5]
+  .text              ro code  0x00004670    0x2e  DblCmpGe.o [5]
+  .text              ro code  0x000046a0    0x2e  I32ToDbl.o [5]
+  .text              ro code  0x000046ce    0x24  copy_init2.o [5]
+  .iar.init_table    const    0x000046f4    0x24  - Linker created -
+  .text              ro code  0x00004718    0x20  data_init2.o [5]
+  .text              ro code  0x00004738    0x1c  iarwstd.o [6]
+  .text              ro code  0x00004754    0x1a  zero_init2.o [5]
+  .rodata            const    0x00004770    0x18  NRF24L01.o [1]
+  .text              ro code  0x00004788    0x18  cmain.o [5]
+  .text              ro code  0x000047a0    0x16  strchr.o [5]
+  .rodata            const    0x000047b8    0x14  main.o [1]
+  .rodata            const    0x000047cc    0x14  main.o [1]
+  .rodata            const    0x000047e0    0x14  main.o [1]
+  .rodata            const    0x000047f4    0x14  tick.o [1]
+  .text              ro code  0x00004808    0x14  exit.o [6]
+  CODE               ro code  0x0000481c    0x14  cpu.o [4]
+  .rodata            const    0x00004830    0x10  main.o [1]
+  .rodata            const    0x00004840    0x10  main.o [1]
+  .rodata            const    0x00004850    0x10  main.o [1]
+  .rodata            const    0x00004860    0x10  main.o [1]
+  .rodata            const    0x00004870    0x10  main.o [1]
+  .rodata            const    0x00004880    0x10  main.o [1]
+  .rodata            const    0x00004890    0x10  main.o [1]
+  .rodata            const    0x000048a0    0x10  main.o [1]
+  .rodata            const    0x000048b0    0x10  main.o [1]
+  .rodata            const    0x000048c0    0x10  main.o [1]
+  .rodata            const    0x000048d0    0x10  setMode.o [1]
+  .rodata            const    0x000048e0    0x10  setMode.o [1]
+  .text              ro code  0x000048f0     0xe  div.o [3]
+  .rodata            const    0x00004900     0xc  count.o [1]
+  .rodata            const    0x0000490c     0xc  human.o [1]
+  .rodata            const    0x00004918     0xc  main.o [1]
+  .rodata            const    0x00004924     0xc  main.o [1]
+  .rodata            const    0x00004930     0xc  main.o [1]
+  .rodata            const    0x0000493c     0xc  main.o [1]
+  .rodata            const    0x00004948     0xc  main.o [1]
+  .rodata            const    0x00004954     0xc  main.o [1]
+  .rodata            const    0x00004960     0xc  main.o [1]
+  .rodata            const    0x0000496c     0xc  main.o [1]
+  .rodata            const    0x00004978     0xc  main.o [1]
+  .rodata            const    0x00004984     0xc  main.o [1]
+  .rodata            const    0x00004990     0xc  main.o [1]
+  .rodata            const    0x0000499c     0xc  main.o [1]
+  .rodata            const    0x000049a8     0xc  main.o [1]
+  .rodata            const    0x000049b4     0xc  main.o [1]
+  .rodata            const    0x000049c0     0xc  main.o [1]
+  .rodata            const    0x000049cc     0xc  main.o [1]
+  .rodata            const    0x000049d8     0xc  main.o [1]
+  .rodata            const    0x000049e4     0xc  main.o [1]
+  .rodata            const    0x000049f0     0xc  main.o [1]
+  .rodata            const    0x000049fc     0xc  main.o [1]
+  .rodata            const    0x00004a08     0xc  melt.o [1]
+  .rodata            const    0x00004a14     0xc  mq.o [1]
+  .rodata            const    0x00004a20     0xc  password.o [1]
+  .rodata            const    0x00004a2c     0xc  password.o [1]
+  .rodata            const    0x00004a38     0xc  sysctl.o [4]
+  .text              ro code  0x00004a44     0xc  I32DivMod.o [5]
+  .text              ro code  0x00004a50     0xa  cexit.o [5]
+  .text              ro code  0x00004a5a     0xa  xsprout.o [3]
+  .rodata            const    0x00004a64     0x8  count.o [1]
+  .rodata            const    0x00004a6c     0x8  count.o [1]
+  .rodata            const    0x00004a74     0x8  count.o [1]
+  .rodata            const    0x00004a7c     0x8  tick.o [1]
+  .rodata            const    0x00004a84     0x8  xprintffull.o [3]
+  .text              ro code  0x00004a8c     0x6  startup_ewarm.o [1]
+  .text              ro code  0x00004a92     0x6  exit.o [3]
+  .text              ro code  0x00004a98     0x2  I64DivZer.o [5]
+  .text              ro code  0x00004a9a     0x4  low_level_init.o [3]
+  Initializer bytes  ro data  0x00004aa0    0x38  <for P2 s0> (used: 0x37)
+                            - 0x00004ad8  0x49d8
+
+"P2", part 1 of 3:                         0x400
+  .noinit            uninit   0x20000000   0x400  startup_ewarm.o [1]
+                            - 0x20000400   0x400
+
+"P2", part 2 of 3:                          0xc8
+  .bss               zero     0x20000400    0x20  tick.o [1]
+  .bss               zero     0x20000420    0x14  NRF24L01.o [1]
+  .bss               zero     0x20000434    0x14  NRF24L01.o [1]
+  .bss               zero     0x20000448     0xc  NRF24L01.o [1]
+  .bss               zero     0x20000454     0xc  NRF24L01.o [1]
+  .bss               zero     0x20000460     0xc  NRF24L01.o [1]
+  .bss               zero     0x2000046c     0xc  NRF24L01.o [1]
+  .bss               zero     0x20000478     0xc  count.o [1]
+  .bss               zero     0x20000484     0xc  main.o [1]
+  .bss               zero     0x20000490     0x8  temp.o [1]
+  .bss               zero     0x20000498     0x4  count.o [1]
+  .bss               zero     0x2000049c     0x4  count.o [1]
+  .bss               zero     0x200004a0     0x4  count.o [1]
+  .bss               zero     0x200004a4     0x4  count.o [1]
+  .bss               zero     0x200004a8     0x4  main.o [1]
+  .bss               zero     0x200004ac     0x4  temp.o [1]
+  .bss               zero     0x200004b0     0x4  temp.o [1]
+  .bss               zero     0x200004b4     0x4  tick.o [1]
+  .bss               zero     0x200004b8     0x4  iarwstd.o [6]
+  .bss               zero     0x200004bc     0x2  main.o [1]
+  .bss               zero     0x200004be     0x1  NRF24L01.o [1]
+  .bss               zero     0x200004bf     0x1  human.o [1]
+  .bss               zero     0x200004c0     0x1  human.o [1]
+  .bss               zero     0x200004c1     0x1  main.o [1]
+  .bss               zero     0x200004c2     0x1  main.o [1]
+  .bss               zero     0x200004c3     0x1  mq.o [1]
+  .bss               zero     0x200004c4     0x1  mq.o [1]
+  .bss               zero     0x200004c5     0x1  setMode.o [1]
+  .bss               zero     0x200004c6     0x1  setMode.o [1]
+  .bss               zero     0x200004c7     0x1  tick.o [1]
+                            - 0x200004c8    0xc8
+
+"P2", part 3 of 3:                          0x38
+  P2 s0                       0x200004c8    0x38  <Init block>
+    .data            inited   0x200004c8    0x14  main.o [1]
+    .data            inited   0x200004dc     0x8  NRF24L01.o [1]
+    .data            inited   0x200004e4     0x4  main.o [1]
+    .data            inited   0x200004e8     0x4  main.o [1]
+    .data            inited   0x200004ec     0x4  main.o [1]
+    .data            inited   0x200004f0     0x4  systemInit.o [1]
+    .data            inited   0x200004f4     0x2  main.o [1]
+    .data            inited   0x200004f6     0x2  main.o [1]
+    .data            inited   0x200004f8     0x2  main.o [1]
+    .data            inited   0x200004fa     0x2  main.o [1]
+    .data            inited   0x200004fc     0x2  password.o [1]
+    .data            inited   0x200004fe     0x1  main.o [1]
+                            - 0x20000500    0x38
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init2)
+    1 destination range, total size 0xc8:
+          0x20000400  0xc8
+
+Copy (__iar_copy_init2)
+    1 source range, total size 0x38 (101% of destination):
+          0x00004aa0  0x38
+    1 destination range, total size 0x37:
+          0x200004c8  0x37
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+L:\所有程序备份\最终程序 宿舍2\Debug\Obj: [1]
+    LCD12864.o            736
+    NRF24L01.o          1 312       32       97
+    ZLG7289.o             404
+    buzzer.o              168
+    count.o               504       36       28
+    human.o               248       12        2
+    main.o              3 860      501       61
+    melt.o                 68       12
+    mq.o                  356       12        2
+    password.o            128       26        2
+    setMode.o             244       32        2
+    startup_ewarm.o         6      256    1 024
+    systemInit.o           80        4        4
+    temp.o                804                16
+    tick.o                360       28       37
+    uartGetPut.o           64
+    -------------------------------------------
+    Total:              9 342      951    1 275
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tl_in.a: [3]
+    div.o                  14
+    exit.o                  6
+    low_level_init.o        4
+    sprintf.o              48
+    xdnorm.o              180
+    xdscale.o             268
+    xprintffull.o       3 218        8
+    xsprout.o              10
+    -------------------------------------------
+    Total:              3 748        8
+
+driverlib.a: [4]
+    adc.o                 232
+    cpu.o                  20
+    gpio.o                712
+    interrupt.o           136
+    ssi.o                 116
+    sysctl.o              868      104
+    systick.o              48
+    timer.o                96
+    uart.o                108
+    -------------------------------------------
+    Total:              2 336      104
+
+rt7M_tl.a: [5]
+    ABImemcpy.o           112
+    DblAdd.o              230
+    DblCmpGe.o             46
+    DblCmpLe.o             46
+    DblDiv.o              582
+    DblMul.o              418
+    DblSub.o              382
+    DblToI32.o             86
+    I32DivMod.o            12
+    I32ToDbl.o             46
+    I64DivMod.o           302
+    I64DivZer.o             2
+    cexit.o                10
+    cmain.o                24
+    copy_init2.o           36
+    data_init2.o           32
+    memchr.o               88
+    strchr.o               22
+    strlen.o               54
+    zero_init2.o           26
+    -------------------------------------------
+    Total:              2 556
+
+shb_l.a: [6]
+    exit.o                 20
+    iarwstd.o              28                 4
+    -------------------------------------------
+    Total:                 48                 4
+
+    Gaps                   20        8        1
+    Linker created                  39
+-----------------------------------------------
+    Grand Total:       18 050    1 110    1 280
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+ADCIntClear             0x00003e15    0x8  Code  Gb  adc.o [4]
+ADCIntEnable            0x00003de5   0x12  Code  Gb  adc.o [4]
+ADCIntStatus            0x00003df9   0x1a  Code  Gb  adc.o [4]
+ADCProcessorTrigger     0x00003ec5    0x8  Code  Gb  adc.o [4]
+ADCSequenceConfigure    0x00003e35   0x2e  Code  Gb  adc.o [4]
+ADCSequenceDataGet      0x00003ea1   0x22  Code  Gb  adc.o [4]
+ADCSequenceDisable      0x00003e29    0xc  Code  Gb  adc.o [4]
+ADCSequenceEnable       0x00003e1d    0xc  Code  Gb  adc.o [4]
+ADCSequenceStepConfigure
+                        0x00003e65   0x3a  Code  Gb  adc.o [4]
+ADC_EndFlag             0x200004c3    0x1  Data  Gb  mq.o [1]
+ADC_Sequence_0_ISR      0x00003991   0x22  Code  Gb  mq.o [1]
+Alarm                   0x00000fdd   0x38  Code  Gb  main.o [1]
+BZ_Init                 0x00003041   0x4c  Code  Gb  count.o [1]
+CE                      0x20000454    0xc  Data  Gb  NRF24L01.o [1]
+CPUcpsid                0x0000481d         Code  Gb  cpu.o [4]
+CPUcpsie                0x00004825         Code  Gb  cpu.o [4]
+CPUwfi                  0x0000482d         Code  Gb  cpu.o [4]
+CSN                     0x20000460    0xc  Data  Gb  NRF24L01.o [1]
+CheckPwd                0x00004199   0x80  Code  Gb  password.o [1]
+FaultISR                0x00004a8f    0x2  Code  Lc  startup_ewarm.o [1]
+FoundFire               0x200004c4    0x1  Data  Gb  mq.o [1]
+FoundThief              0x200004c0    0x1  Data  Gb  human.o [1]
+GPIODirModeSet          0x00002b31   0x4c  Code  Gb  gpio.o [4]
+GPIOIntTypeSet          0x00002b7d   0x62  Code  Gb  gpio.o [4]
+GPIOPadConfigSet        0x00002be1  0x11e  Code  Gb  gpio.o [4]
+GPIOPinIntClear         0x00002d29    0x8  Code  Gb  gpio.o [4]
+GPIOPinIntEnable        0x00002d01   0x12  Code  Gb  gpio.o [4]
+GPIOPinIntStatus        0x00002d15   0x14  Code  Gb  gpio.o [4]
+GPIOPinRead             0x00002d31    0x8  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOInput    0x00002d45   0x24  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOOutput   0x00002d69   0x24  Code  Gb  gpio.o [4]
+GPIOPinTypeSSI          0x00002d8d   0x24  Code  Gb  gpio.o [4]
+GPIOPinTypeTimer        0x00002db1   0x24  Code  Gb  gpio.o [4]
+GPIOPinTypeUART         0x00002dd5   0x24  Code  Gb  gpio.o [4]
+GPIOPinWrite            0x00002d39    0xa  Code  Gb  gpio.o [4]
+GPIO_Port_A_ISR         0x00001fed   0x64  Code  Gb  NRF24L01.o [1]
+GPIO_Port_E_ISR         0x00000101   0xc8  Code  Gb  main.o [1]
+GPIO_Port_F_ISR         0x0000308d  0x1a8  Code  Gb  count.o [1]
+IRQ                     0x2000046c    0xc  Data  Gb  NRF24L01.o [1]
+Init_18B20              0x0000252d   0x7a  Code  Gb  temp.o [1]
+IntDefaultHandler       0x00004a91    0x2  Code  Lc  startup_ewarm.o [1]
+IntEnable               0x0000411d   0x74  Code  Gb  interrupt.o [4]
+IntMasterEnable         0x00004111    0xc  Code  Gb  interrupt.o [4]
+LedInit                 0x00002055   0x20  Code  Gb  NRF24L01.o [1]
+LedOff                  0x00002083    0xe  Code  Gb  NRF24L01.o [1]
+LedOn                   0x00002075    0xe  Code  Gb  NRF24L01.o [1]
+NRF_IO_Clr              0x00001ce9   0x10  Code  Gb  NRF24L01.o [1]
+NRF_IO_Enable           0x00001cb1    0xc  Code  Gb  NRF24L01.o [1]
+NRF_IO_In               0x00001cbd    0xe  Code  Gb  NRF24L01.o [1]
+NRF_IO_Init             0x00001cf9   0x84  Code  Gb  NRF24L01.o [1]
+NRF_IO_MemberSet        0x00001ca9    0x8  Code  Gb  NRF24L01.o [1]
+NRF_IO_Out              0x00001ccb    0xe  Code  Gb  NRF24L01.o [1]
+NRF_IO_Set              0x00001cd9   0x10  Code  Gb  NRF24L01.o [1]
+NmiSR                   0x00004a8d    0x2  Code  Lc  startup_ewarm.o [1]
+RX_Mode                 0x00001f3d   0x4a  Code  Gb  NRF24L01.o [1]
+RdByte                  0x000025c9   0x9a  Code  Gb  temp.o [1]
+Region$$Table$$Base     0x000046f4          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00004718          --   Gb  - Linker created -
+SPI_RW                  0x00001e31   0x20  Code  Gb  NRF24L01.o [1]
+SPI_RW_Reg              0x00001e59   0x2a  Code  Gb  NRF24L01.o [1]
+SPI_Read                0x00001e83   0x26  Code  Gb  NRF24L01.o [1]
+SPI_Read_Buf            0x00001ea9   0x4a  Code  Gb  NRF24L01.o [1]
+SPI_Write_Buf           0x00001ef3   0x44  Code  Gb  NRF24L01.o [1]
+SSIConfigSetExpClk      0x00004219   0x4e  Code  Gb  ssi.o [4]
+SSIDataGet              0x00004281    0xc  Code  Gb  ssi.o [4]
+SSIDataPut              0x00004275    0xa  Code  Gb  ssi.o [4]
+SSIEnable               0x00004269    0xa  Code  Gb  ssi.o [4]
+SourceAddress           0x200004e4    0x4  Data  Gb  main.o [1]
+SysCtlADCSpeedSet       0x000024ed   0x40  Code  Gb  sysctl.o [4]
+SysCtlClockGet          0x000023a1  0x14c  Code  Gb  sysctl.o [4]
+SysCtlClockSet          0x00002231  0x170  Code  Gb  sysctl.o [4]
+SysCtlDelay             0x00002229    0x8  Code  Gb  sysctl.o [4]
+SysCtlLDOSet            0x0000221d    0x6  Code  Gb  sysctl.o [4]
+SysCtlPeripheralDisable
+                        0x000021f1   0x26  Code  Gb  sysctl.o [4]
+SysCtlPeripheralEnable  0x000021c9   0x26  Code  Gb  sysctl.o [4]
+SysTickEnable           0x000045e1    0xe  Code  Gb  systick.o [4]
+SysTickIntEnable        0x000045f1    0xe  Code  Gb  systick.o [4]
+SysTickPeriodSet        0x00004605    0x8  Code  Gb  systick.o [4]
+SysTick_ISR             0x0000374d  0x100  Code  Gb  tick.o [1]
+TX_ADDRESS              0x200004dc    0x8  Data  Gb  NRF24L01.o [1]
+TX_Mode                 0x00001f87   0x5e  Code  Gb  NRF24L01.o [1]
+TargetAddress           0x200004e8    0x4  Data  Gb  main.o [1]
+TheSysClock             0x200004f0    0x4  Data  Gb  systemInit.o [1]
+TimerConfigure          0x00004385   0x1c  Code  Gb  timer.o [4]
+TimerDisable            0x00004375    0xc  Code  Gb  timer.o [4]
+TimerEnable             0x00004369    0xc  Code  Gb  timer.o [4]
+TimerLoadSet            0x000043a1   0x12  Code  Gb  timer.o [4]
+TimerMatchSet           0x000043b5   0x12  Code  Gb  timer.o [4]
+UARTConfigSetExpClk     0x000042fd   0x38  Code  Gb  uart.o [4]
+UARTDisable             0x0000434d   0x1c  Code  Gb  uart.o [4]
+UARTEnable              0x00004335   0x18  Code  Gb  uart.o [4]
+WrByte                  0x00002663   0x8c  Code  Gb  temp.o [1]
+_GenldDefault           0x00001a2d  0x248  Code  Lc  xprintffull.o [3]
+_LdtobDefault           0x00001615  0x418  Code  Lc  xprintffull.o [3]
+_LitobDefault           0x00001509  0x10c  Code  Lc  xprintffull.o [3]
+_Printf                 0x00001015  0x4f4  Code  Gb  xprintffull.o [3]
+_PutcharsDefault        0x00001c75   0x32  Code  Lc  xprintffull.o [3]
+_SProut                 0x00004a5b    0xa  Code  Gb  xsprout.o [3]
+__aeabi_cdcmple         0x00004641         Code  Gb  DblCmpLe.o [5]
+__aeabi_cdrcmple        0x00004671         Code  Gb  DblCmpGe.o [5]
+__aeabi_d2iz            0x0000447d         Code  Gb  DblToI32.o [5]
+__aeabi_d2uiz           0x000044a9         Code  Gb  DblToI32.o [5]
+__aeabi_dadd            0x00003ecd         Code  Gb  DblAdd.o [5]
+__aeabi_ddiv            0x00002df9         Code  Gb  DblDiv.o [5]
+__aeabi_dmul            0x00003239         Code  Gb  DblMul.o [5]
+__aeabi_dsub            0x00003571         Code  Gb  DblSub.o [5]
+__aeabi_i2d             0x000046a1         Code  Gb  I32ToDbl.o [5]
+__aeabi_ldiv0           0x00004a99         Code  Gb  I64DivZer.o [5]
+__aeabi_ldivmod         0x000039bd         Code  Gb  I64DivMod.o [5]
+__aeabi_memcpy          0x0000428d         Code  Gb  ABImemcpy.o [5]
+__aeabi_memcpy4         0x000042a7         Code  Gb  ABImemcpy.o [5]
+__aeabi_memcpy8         0x000042a7         Code  Gb  ABImemcpy.o [5]
+__aeabi_ui2d            0x000046b5         Code  Gb  I32ToDbl.o [5]
+__aeabi_uidivmod        0x00004a45         Code  Gb  I32DivMod.o [5]
+__aeabi_uldivmod        0x000039d1         Code  Gb  I64DivMod.o [5]
+__delayNuS              0x000033dd   0x1c  Code  Gb  ZLG7289.o [1]
+__exit                  0x00004809   0x14  Code  Gb  exit.o [6]
+__iar_Dnorm             0x00003fb3   0xb4  Code  Gb  xdnorm.o [3]
+__iar_Dscale            0x00003aed  0x10c  Code  Gb  xdscale.o [3]
+__iar_Memchr            0x00004425         Code  Gb  memchr.o [5]
+__iar_Strchr            0x000047a1         Code  Gb  strchr.o [5]
+__iar_copy_init2        0x000046cf   0x24  Code  Gb  copy_init2.o [5]
+__iar_d2uiz             0x000044b3         Code  Gb  DblToI32.o [5]
+__iar_dadd              0x00003edf         Code  Gb  DblAdd.o [5]
+__iar_data_init2        0x00004719   0x20  Code  Gb  data_init2.o [5]
+__iar_dsub              0x00003583         Code  Gb  DblSub.o [5]
+__iar_dsubStart         0x00003595         Code  Gb  DblSub.o [5]
+__iar_program_start     0x00004789         Code  Gb  cmain.o [5]
+__iar_sh_stdout_close   0x00004739   0x16  Code  Gb  iarwstd.o [6]
+__iar_sh_stdout_handle  0x200004b8    0x4  Data  Lc  iarwstd.o [6]
+__iar_ui2d              0x000046b7         Code  Gb  I32ToDbl.o [5]
+__iar_zero_init2        0x00004755   0x1a  Code  Gb  zero_init2.o [5]
+__low_level_init        0x00004a9b    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000  0x100  Data  Gb  startup_ewarm.o [1]
+__zlg7289SPIRead        0x00003453   0x52  Code  Gb  ZLG7289.o [1]
+__zlg7289SPIWrite       0x000033f9   0x5a  Code  Gb  ZLG7289.o [1]
+_exit                   0x00004a51         Code  Gb  cexit.o [5]
+_main                   0x0000479b         Code  Gb  cmain.o [5]
+adcInit                 0x00003859   0x50  Code  Gb  mq.o [1]
+adcSample               0x000038a9   0x26  Code  Gb  mq.o [1]
+buzzerInit              0x00004069   0x2c  Code  Gb  buzzer.o [1]
+buzzerQuiet             0x000040e9   0x20  Code  Gb  buzzer.o [1]
+buzzerSound             0x00004095   0x54  Code  Gb  buzzer.o [1]
+clearAll                0x000028b9   0x1e  Code  Gb  LCD12864.o [1]
+clockInit               0x00004505   0x20  Code  Gb  systemInit.o [1]
+code                    0x200004c8   0x14  Data  Gb  main.o [1]
+count                   0x2000049c    0x4  Data  Gb  count.o [1]
+date                    0x200004f4    0x2  Data  Gb  main.o [1]
+day                     0x200004c7    0x1  Data  Gb  tick.o [1]
+decimal                 0x200004b0    0x4  Data  Gb  temp.o [1]
+div                     0x000048f1    0xe  Code  Gb  div.o [3]
+exit                    0x00004a93    0x6  Code  Gb  exit.o [3]
+flag                    0x200004a8    0x4  Data  Gb  main.o [1]
+flag1                   0x200004a0    0x4  Data  Gb  count.o [1]
+flag2                   0x200004a4    0x4  Data  Gb  count.o [1]
+flagPerson              0x20000498    0x4  Data  Gb  count.o [1]
+g_pulRCGCRegs           0x00004a38    0xc  Data  Lc  sysctl.o [4]
+g_pulXtals              0x000043c8   0x5c  Data  Lc  sysctl.o [4]
+hasPrintOnce            0x200004c1    0x1  Data  Gb  main.o [1]
+hour                    0x200004f6    0x2  Data  Gb  main.o [1]
+humanInit               0x00003bf9   0x28  Code  Gb  human.o [1]
+humanSound              0x00003c21   0xc8  Code  Gb  human.o [1]
+init_io                 0x00001df9   0x38  Code  Gb  NRF24L01.o [1]
+integer                 0x200004ac    0x4  Data  Gb  temp.o [1]
+jtagWait                0x000044d5   0x30  Code  Gb  systemInit.o [1]
+lcdByteWrite            0x00002929   0x70  Code  Gb  LCD12864.o [1]
+lcdComdWrite            0x000028d7   0x28  Code  Gb  LCD12864.o [1]
+lcdDataWrite            0x000028ff   0x28  Code  Gb  LCD12864.o [1]
+lcdInit                 0x00002851   0x68  Code  Gb  LCD12864.o [1]
+lcdSetPos               0x0000299d   0x4c  Code  Gb  LCD12864.o [1]
+lcdWriteStr             0x000029e9  0x142  Code  Gb  LCD12864.o [1]
+main                    0x000001d9  0xe04  Code  Gb  main.o [1]
+meltInit                0x00004525   0x18  Code  Gb  melt.o [1]
+memchr                  0x00004425         Code  Gb  memchr.o [5]
+minute                  0x200004f8    0x2  Data  Gb  main.o [1]
+modebody                0x200004c5    0x1  Data  Gb  setMode.o [1]
+modeforg                0x200004c6    0x1  Data  Gb  setMode.o [1]
+mq_Alarm                0x000038d1   0xc0  Code  Gb  mq.o [1]
+password                0x200004fc    0x2  Data  Gb  password.o [1]
+presence                0x200004c2    0x1  Data  Gb  main.o [1]
+pressKeyCount           0x200004ec    0x4  Data  Gb  main.o [1]
+psw                     0x200004bc    0x2  Data  Gb  main.o [1]
+pulStack                0x20000000  0x400  Data  Lc  startup_ewarm.o [1]
+readMeltState           0x0000453d   0x28  Code  Gb  melt.o [1]
+readTemp                0x000026f5   0xe8  Code  Gb  temp.o [1]
+receiveData             0x00002095   0x74  Code  Gb  NRF24L01.o [1]
+rx_buf                  0x20000420   0x14  Data  Gb  NRF24L01.o [1]
+s                       0x20000400   0x20  Data  Gb  tick.o [1]
+second                  0x200004fa    0x2  Data  Gb  main.o [1]
+sendCodeData            0x0000210d   0x1e  Code  Gb  NRF24L01.o [1]
+sendData                0x00002131   0x90  Code  Gb  NRF24L01.o [1]
+setBodyMode             0x00003cf1   0x70  Code  Gb  setMode.o [1]
+setForgMode             0x00003d61   0x74  Code  Gb  setMode.o [1]
+setTime                 0x000036f1   0x3e  Code  Gb  tick.o [1]
+sprintf                 0x00004611   0x30  Code  Gb  sprintf.o [3]
+ssiInit                 0x00001d81   0x74  Code  Gb  NRF24L01.o [1]
+sta                     0x200004be    0x1  Data  Gb  NRF24L01.o [1]
+str                     0x20000478    0xc  Data  Gb  count.o [1]
+str_send                0x20000448    0xc  Data  Gb  NRF24L01.o [1]
+strchr                  0x000047a1         Code  Gb  strchr.o [5]
+strlen                  0x000045a9         Code  Gb  strlen.o [5]
+sysTick_Init            0x00003731   0x1c  Code  Gb  tick.o [1]
+temp                    0x20000484    0xc  Data  Gb  main.o [1]
+tempBuffer              0x20000490    0x8  Data  Gb  temp.o [1]
+tempToStr               0x000027e5   0x5e  Code  Gb  temp.o [1]
+temp_portInit           0x000025a9   0x20  Code  Gb  temp.o [1]
+time                    0x200004b4    0x4  Data  Gb  tick.o [1]
+tx_buf                  0x20000434   0x14  Data  Gb  NRF24L01.o [1]
+uartInit                0x00004569   0x3c  Code  Gb  uartGetPut.o [1]
+ucKey                   0x200004fe    0x1  Data  Gb  main.o [1]
+ucVal                   0x200004bf    0x1  Data  Gb  human.o [1]
+zlg7289Cmd              0x000034a5   0x2e  Code  Gb  ZLG7289.o [1]
+zlg7289Init             0x00003511   0x5c  Code  Gb  ZLG7289.o [1]
+zlg7289Key              0x000034d3   0x3a  Code  Gb  ZLG7289.o [1]
+
+
+[1] = L:\所有程序备份\最终程序 宿舍2\Debug\Obj
+[2] = command line
+[3] = dl7M_tl_in.a
+[4] = driverlib.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  18 050 bytes of readonly  code memory
+   1 110 bytes of readonly  data memory
+   1 280 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
